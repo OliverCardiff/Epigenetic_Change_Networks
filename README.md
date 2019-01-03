@@ -1,5 +1,6 @@
-# Epigenetic_Change_Networks
+# Epigenetic Change Networks
 Scripts for constructing network views of gene differentials from various data sources
+This is a repository for all the scripts used in Data Chapter 3 of my Thesis.
 
 Below are several images constructed with these scripts from a reciprocal transplantation experiment.
 
