@@ -1,0 +1,1 @@
+heatmap.3(mg[,1:4], trace="none", col=cols, main="Gene Body Methylation", cex.main=0.7)

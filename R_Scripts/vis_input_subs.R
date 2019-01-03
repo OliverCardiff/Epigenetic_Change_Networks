@@ -1,0 +1,47 @@
+pdf("Div_Rates.pdf", height=12, width=8)
+
+par(mfrow=c(3,2), cex=0.6)
+
+plot(density(log(p1K[,5])), lty=2, xlim=c(-4,9), col="red", main="Promotor 1Kb MEDIP Read Coverage, Sample vs Input", xlab="Log Read Coverage")
+points(density(log(p1K[,4])), type="l", col="blue")
+points(density(log(p1K[,3])), type="l", col="blue")
+points(density(log(p1K[,2])), type="l", col="blue")
+points(density(log(p1K[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+plot(density(log(p1K_c[,5])), lty=2, xlim=c(-4,9), col="red", main="(left) POST CORRECTION")
+points(density(log(p1K_c[,4])), type="l", col="blue")
+points(density(log(p1K_c[,3])), type="l", col="blue")
+points(density(log(p1K_c[,2])), type="l", col="blue")
+points(density(log(p1K_c[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+plot(density(log(p1C[,5])), lty=2, xlim=c(-4,9), col="red",  main="Promotor 100bp MEDIP Read Coverage, Sample vs Input", xlab="Log Read Coverage")
+points(density(log(p1C[,4])), type="l", col="blue")
+points(density(log(p1C[,3])), type="l", col="blue")
+points(density(log(p1C[,2])), type="l", col="blue")
+points(density(log(p1C[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+plot(density(log(p1C_c[,5])), lty=2, xlim=c(-4,9), col="red",  main="(left) POST CORRECTION", xlab="Log Read Coverage")
+points(density(log(p1C_c[,4])), type="l", col="blue")
+points(density(log(p1C_c[,3])), type="l", col="blue")
+points(density(log(p1C_c[,2])), type="l", col="blue")
+points(density(log(p1C_c[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+plot(density(log(mg[,5])), lty=2, xlim=c(-4,9), col="red",  main="Gene Body MEDIP Read Coverage, Sample vs Input", xlab="Log Read Coverage")
+points(density(log(mg[,4])), type="l", col="blue")
+points(density(log(mg[,3])), type="l", col="blue")
+points(density(log(mg[,2])), type="l", col="blue")
+points(density(log(mg[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+plot(density(log(mg_c[,5])), lty=2, xlim=c(-4,9), col="red", main="(left) POST CORRECTION", xlab="Log Read Coverage")
+points(density(log(mg_c[,4])), type="l", col="blue")
+points(density(log(mg_c[,3])), type="l", col="blue")
+points(density(log(mg_c[,2])), type="l", col="blue")
+points(density(log(mg_c[,1])), type="l", col="blue")
+legend("topright", bty="n", col=c("red", "blue"), lty=c(2,1), legend=c("Input(control)", "Samples"))
+
+dev.off()
